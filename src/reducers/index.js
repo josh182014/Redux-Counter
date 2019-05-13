@@ -12,8 +12,18 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
+      console.log('reducer', action)
+      return {
+        ...state,
+        count: ++initialState.count
+      };
     // Fill in the body of this case
     case DECREMENT:
+      console.log(action)
+      return {
+        ...state,
+        count: --initialState.count
+      };
     // Fill in the body of this case
     default:
       return state;
